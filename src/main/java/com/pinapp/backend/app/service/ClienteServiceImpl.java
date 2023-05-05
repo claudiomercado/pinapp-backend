@@ -56,7 +56,8 @@ public class ClienteServiceImpl implements IClienteService {
 
         return clientesConFechaProbableMuerte;	
 	}
-	
+					 			 
+				 
 	private LocalDate calcularFechaProbableMuerte(LocalDate fechaNacimiento, int edad) {
 		LocalDate fechaActual = LocalDate.now();
         int añosRestantes = 76 - edad; // Esperanza de vida de la población
