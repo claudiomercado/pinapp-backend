@@ -8,8 +8,11 @@ import com.pinapp.backend.app.model.dto.ClienteDTO;
 public interface IClienteService {
 
 	public Cliente createCliente(Cliente cliente);
+
 	public List<ClienteDTO> listClienteDTO();
-	public String averageAgeCliente();
+
+	public String getAverageAgeCliente();
+
 	public String standardDeviationAgeCliente();
 
 }

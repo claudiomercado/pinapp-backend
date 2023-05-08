@@ -19,34 +19,25 @@ public class ClienteController {
 
 	@Autowired
 	private IClienteService clienteService;
-	
+
 	@PostMapping("/createClientes")
 	public Cliente create(@RequestBody Cliente cliente) {
 		return clienteService.createCliente(cliente);
 	}
-	
+
 	@GetMapping("/listClientes")
-	public List<ClienteDTO> getAll (){
+	public List<ClienteDTO> getAll() {
 		return clienteService.listClienteDTO();
 	}
-	
+
 	@GetMapping("/averageAgeClientes")
-	public String averageAge(){
-		return clienteService.averageAgeCliente();
+	public String averageAge() {
+		return clienteService.getAverageAgeCliente();
 	}
-	
+
 	@GetMapping("/standardDeviationAgeClientes")
-	public String standardDeviationAge(){
+	public String standardDeviationAge() {
 		return clienteService.standardDeviationAgeCliente();
 	}
-	
-//	@GetMapping("/averageAgeClientes")
-//	public double averageAge(){
-//		return clienteService.averageAgeCliente();
-//	}
-//	
-//	@GetMapping("/standardDeviationAgeClientes")
-//	public double standardDeviationAge(){
-//		return clienteService.standardDeviationAgeCliente();
-//	}
+
 }
